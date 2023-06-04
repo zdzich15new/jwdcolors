@@ -1,9 +1,9 @@
-Do repozytorium wrzucić pliki:
-.src
-.test
-.gitignore
-pom i reszte pliczków
+Ro repository add:
+- .src
+- .test
+- .gitignore
+- pom.xml and the rest of files
 
-nie wrzucać 
-.mvn
-.idea
+don't put:
+- .mvn
+- .idea
