@@ -1,4 +1,4 @@
-package pl.edu.wszib.jwd.jwdcolors;
+package pl.edu.wszib.jwd.jwdcolors.controller;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
