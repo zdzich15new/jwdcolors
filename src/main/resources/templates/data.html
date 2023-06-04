@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layout}">
+<head>
+    <meta charset="UTF-8">
+    <title th:text="${title}"></title>
+</head>
+<body>
+
+<div layout:fragment="content">
+    <section class="my-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+
+                    <h1 th:text="${title}"></h1>
+
+                    <table class="table">
+
+                        <tr>
+                            <th>ID</th>
+                            <th colspan="2">Kolor</th>
+                            <th>Data</th>
+                        </tr>
+                        <tr th:each="selectedColor : ${selectedColors}">
+                            <td th:text="${selectedColor.id}"></td>
+                            <td th:text="${selectedColor.color}"></td>
+                            <td th:attr="bgcolor=${selectedColor.color}"></td>
+                            <td th:text="${selectedColor.ctime}"></td>
+                            <td th:text="${#dates.format(selectedColor.ctime, 'dd MM YYYY HH:mm:ss')}"></td>
+                        </tr>
+
+                    </table>
+
+
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+
+</body>
+</html>
